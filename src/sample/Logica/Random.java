@@ -34,11 +34,10 @@ public class Random {
         this.a = 3 + (8 * k);
     }
 
-    public int obtenerAleatorio(){
+    public double obtenerAleatorio(){
         x0 = (a * x0 + c) % m;
         i++;
-        int ri = (int)(((double) x0 / ((double) m )) * 10000);
-        return ri;
+        return (double) x0 / ((double) m );
     }
 
 }
