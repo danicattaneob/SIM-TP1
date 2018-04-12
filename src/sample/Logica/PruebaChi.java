@@ -17,17 +17,17 @@ public class PruebaChi {
     }
 
     public void addSerie(double x, int i) {
-        serie[i] = x;
+           serie[i] = x;
+        if(i==(n-1)){addVectorFO();}
     }
 
     public void addVectorFO() {
-        double max = maxValue();
-        double min = minValue();
-        double rango = (max - min) / t;
+        bubbleSort();
+        double r= (serie[n-1] - serie[0]) / t;
         for (int i = 0; i < vectorFrecObt.length; i++) {
             int k = 0;
             for (int j = 0; j < serie.length; j++) {
-                if ((min + (i * rango)) < serie[j] && (min + ((i + 1) * rango)) >= serie[j]) {
+                if ((serie[0]+ (i * r)) < serie[j] && (serie[0] + ((i + 1) * r)) >= serie[j]) {
                     k++;
                 }
             }
@@ -49,7 +49,21 @@ public class PruebaChi {
     }
 
     //AUXILIARES
-    
+    private void bubbleSort() {
+        boolean ordenado = false;
+        int n = serie.length;
+        for (int i = 0; i < n - 1 && !ordenado; i++) {
+            ordenado = true;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (serie[j] > serie[j + 1]) {
+                    double aux = serie[j];
+                    serie[j] = serie[j + 1];
+                    serie[j + 1] = aux;
+                    ordenado = false;
+                }
+            }
+        }
+    }
     public double maxValue() {
         double max = serie[0];
         for (int i = 0; i < serie.length; i++) {

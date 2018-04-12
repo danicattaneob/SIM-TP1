@@ -18,7 +18,7 @@ public class Test {
          for (int i = 0; i < 30; i++) {
             pruChi.addSerie(ranMult2.obtenerAleatorio(), i);            
         }
-        pruChi.addVectorFO();
+   
         System.out.println(pruChi.toString());
         System.out.println(pruChi.toString1());
         System.out.println(pruChi.maxValue());
