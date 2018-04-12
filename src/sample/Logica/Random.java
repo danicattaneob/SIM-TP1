@@ -37,7 +37,10 @@ public class Random {
     public double obtenerAleatorio(){
         x0 = (a * x0 + c) % m;
         i++;
-        return (double) x0 / ((double) m );
+        double ri = (double) x0 / ((double) m );
+        int aux = (int)(ri * 10000);
+        ri = ((double) aux) / 10000;
+        return ri;
     }
 
 }

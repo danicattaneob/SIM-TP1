@@ -16,7 +16,7 @@ public class PruebaChi {
         this.FE = n / t;
     }
 
-    public void addSerie(int x, int i) {
+    public void addSerie(double x, int i) {
         serie[i] = x;
     }
 
