@@ -35,13 +35,13 @@ public class VentanaJiCuadradoJava extends javax.swing.JFrame {
         
         this.gestor = gestor;
         
-        btgIntervalosT.add(rbtT5);
-        btgIntervalosT.add(rbtT10);
-        btgIntervalosT.add(rbtT20);
-        btgIntervalosT.add(rbtTOtro);//DANI LO AGREGO ------------------------
-        rbtT20.setSelected(true);
+//        btgIntervalosT.add(rbtT5);
+//        btgIntervalosT.add(rbtT10);
+//        btgIntervalosT.add(rbtT20);
+//        btgIntervalosT.add(rbtTOtro);//DANI LO AGREGO ------------------------
+//        rbtT20.setSelected(true);
         btnGraficar.setEnabled(false);
-        txtIntervaloOtro.setEnabled(false);//DANI LO AGREGO ------------------------
+     //   txtIntervaloOtro.setEnabled(false);//DANI LO AGREGO ------------------------
     }
 
     /**
@@ -57,10 +57,6 @@ public class VentanaJiCuadradoJava extends javax.swing.JFrame {
         pnlJuCuadradoJava = new javax.swing.JPanel();
         txtTamanioN = new javax.swing.JTextField();
         lblTamanioN = new javax.swing.JLabel();
-        rbtT5 = new javax.swing.JRadioButton();
-        rbtT10 = new javax.swing.JRadioButton();
-        rbtT20 = new javax.swing.JRadioButton();
-        rbtTOtro = new javax.swing.JRadioButton();
         lblIntervalos = new javax.swing.JLabel();
         scpTblFrecuencias = new javax.swing.JScrollPane();
         tblFrecuencias = new javax.swing.JTable();
@@ -74,29 +70,6 @@ public class VentanaJiCuadradoJava extends javax.swing.JFrame {
         setTitle("Prueba ji cuadrado generador Java");
 
         lblTamanioN.setText("Tamaño de muestra (N):");
-
-        rbtT5.setText("5");
-        rbtT5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtT5ActionPerformed(evt);
-            }
-        });
-
-        rbtT10.setText("10");
-
-        rbtT20.setText("20");
-        rbtT20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtT20ActionPerformed(evt);
-            }
-        });
-
-        rbtTOtro.setText("Otro:");
-        rbtTOtro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtTOtroActionPerformed(evt);
-            }
-        });
 
         lblIntervalos.setText("Cantidad de intervalos (T):");
 
@@ -140,54 +113,48 @@ public class VentanaJiCuadradoJava extends javax.swing.JFrame {
             .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
-                        .addComponent(lblTamanioN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtTamanioN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lblIntervalos)
-                    .addComponent(rbtT20)
                     .addComponent(btnGenerarNumeros)
-                    .addComponent(rbtT10)
-                    .addComponent(rbtT5)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rbtTOtro)
-                    .addComponent(btnGraficar))
-                .addGap(66, 66, 66)
+                    .addComponent(btnGraficar)
+                    .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
+                        .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblIntervalos)
+                            .addComponent(lblTamanioN))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtTamanioN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(33, 33, 33)
                 .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblFrecuencias)
                     .addComponent(scpTblFrecuencias, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(216, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         pnlJuCuadradoJavaLayout.setVerticalGroup(
             pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTamanioN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblTamanioN)
-                    .addComponent(lblFrecuencias))
                 .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(lblIntervalos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbtT5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbtT10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbtT20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbtTOtro)
-                        .addGap(7, 7, 7)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(24, 24, 24)
+                        .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblTamanioN)
+                            .addComponent(lblFrecuencias)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlJuCuadradoJavaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtTamanioN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblIntervalos)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addComponent(btnGenerarNumeros)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnGraficar))
                     .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scpTblFrecuencias, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlJuCuadradoJava, java.awt.BorderLayout.CENTER);
@@ -204,20 +171,27 @@ public class VentanaJiCuadradoJava extends javax.swing.JFrame {
         }
         
         if( n > 0) {
-            Enumeration<AbstractButton> elements = btgIntervalosT.getElements();
+       //     Enumeration<AbstractButton> elements = btgIntervalosT.getElements();
             int intervalos = 20;
-            while( elements.hasMoreElements() ){
-                AbstractButton a = elements.nextElement();
-                if( a.isSelected() ){
-                    if(a.getText().equals("Otro:")){//DANI LO AGREGO ------------------------
-                        intervalos = Integer.parseInt(txtIntervaloOtro.getText());//DANI LO AGREGO ------------------------
-                        //System.out.println(intervalos); lo hice para debugear
-                    }else{
-                        intervalos = Integer.parseInt(a.getText()); //DANI LO AGREGO ------------------------
-                    }
-                    break;
-                }
-            }
+           //VALTER AGREGO ---
+            try {
+            intervalos = Integer.parseInt(txtIntervaloOtro.getText());
+            }catch(NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+//          //VALTER AGREGO ---
+//            while( elements.hasMoreElements() ){
+//                AbstractButton a = elements.nextElement();
+//                if( a.isSelected() ){
+//                    if(a.getText().equals("Otro:")){//DANI LO AGREGO ------------------------
+//                        intervalos = Integer.parseInt(txtIntervaloOtro.getText());//DANI LO AGREGO ------------------------
+//                        //System.out.println(intervalos); lo hice para debugear
+//                    }else{
+//                        intervalos = Integer.parseInt(a.getText()); //DANI LO AGREGO ------------------------
+//                    }
+//                    break;
+//                }
+//            }
             this.listFI = gestor.generarFrecuenciasJiCuadrado(Gestor.GENERADOR_JAVA, 
                 n,
                 intervalos,
@@ -283,18 +257,6 @@ public class VentanaJiCuadradoJava extends javax.swing.JFrame {
         vtn.setVisible(true);
     }//GEN-LAST:event_btnGraficarActionPerformed
 
-    private void rbtT5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtT5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbtT5ActionPerformed
-
-    private void rbtTOtroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtTOtroActionPerformed
-        txtIntervaloOtro.setEnabled(true); //DANI LO AGREGO ------------------------
-    }//GEN-LAST:event_rbtTOtroActionPerformed
-
-    private void rbtT20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtT20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbtT20ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgIntervalosT;
@@ -305,10 +267,6 @@ public class VentanaJiCuadradoJava extends javax.swing.JFrame {
     private javax.swing.JLabel lblIntervalos;
     private javax.swing.JLabel lblTamanioN;
     private javax.swing.JPanel pnlJuCuadradoJava;
-    private javax.swing.JRadioButton rbtT10;
-    private javax.swing.JRadioButton rbtT20;
-    private javax.swing.JRadioButton rbtT5;
-    private javax.swing.JRadioButton rbtTOtro;
     private javax.swing.JScrollPane scpTblFrecuencias;
     private javax.swing.JTable tblFrecuencias;
     private javax.swing.JTextArea txtIntervaloOtro;

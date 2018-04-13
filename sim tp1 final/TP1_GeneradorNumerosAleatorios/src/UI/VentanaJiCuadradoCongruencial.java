@@ -35,13 +35,13 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
 
         this.gestor = gestor;
 
-        btgIntervalosT.add(rbtT5);
-        btgIntervalosT.add(rbtT10);
-        btgIntervalosT.add(rbtT20);
-        btgIntervalosT.add(rbtTOtro);//DANI LO AGREGO -------------------------
-        rbtT20.setSelected(true);
+//        btgIntervalosT.add(rbtT5);
+//        btgIntervalosT.add(rbtT10);
+//        btgIntervalosT.add(rbtT20);
+//        btgIntervalosT.add(rbtTOtro);//DANI LO AGREGO -------------------------
+//        rbtT20.setSelected(true);
         btnGraficar.setEnabled(false);//DANI LO AGREGO ------------------------
-        txtIntervaloOtro.setEnabled(false);//DANI LO AGREGO -------------------
+      //  txtIntervaloOtro.setEnabled(false);//DANI LO AGREGO -------------------
 
         rbtParametrosAM.setSelected(true);
         txtG.setEnabled(false);
@@ -67,10 +67,6 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
         pnlJuCuadradoJava = new javax.swing.JPanel();
         txtTamanioN = new javax.swing.JTextField();
         lblTamanioN = new javax.swing.JLabel();
-        rbtT5 = new javax.swing.JRadioButton();
-        rbtT10 = new javax.swing.JRadioButton();
-        rbtT20 = new javax.swing.JRadioButton();
-        rbtTOtro = new javax.swing.JRadioButton();
         lblIntervalos = new javax.swing.JLabel();
         scpTblFrecuencias = new javax.swing.JScrollPane();
         tblFrecuencias = new javax.swing.JTable();
@@ -106,19 +102,6 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
         setTitle("Prueba Ji cuadrado generador congruencial mixto");
 
         lblTamanioN.setText("Tamaño de muestra (N):");
-
-        rbtT5.setText("5");
-
-        rbtT10.setText("10");
-
-        rbtT20.setText("20");
-
-        rbtTOtro.setText("Otro:");
-        rbtTOtro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtTOtroActionPerformed(evt);
-            }
-        });
 
         lblIntervalos.setText("Cantidad de intervalos (T):");
 
@@ -205,26 +188,17 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
                         .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
                                 .addComponent(lblTamanioN)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(txtTamanioN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
                                 .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
-                                        .addComponent(lblIntervalos)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rbtT5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rbtT10))
+                                    .addComponent(lblIntervalos)
                                     .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
                                         .addComponent(lblSemilla)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtSemilla, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rbtT20)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rbtTOtro)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,14 +236,14 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
                     .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addComponent(btnGenerarNumeros)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                 .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblFrecuencias)
                     .addGroup(pnlJuCuadradoJavaLayout.createSequentialGroup()
                         .addGap(158, 158, 158)
                         .addComponent(btnGraficar))
                     .addComponent(scpTblFrecuencias, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         pnlJuCuadradoJavaLayout.setVerticalGroup(
             pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -281,15 +255,10 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
                             .addComponent(txtTamanioN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblTamanioN))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblIntervalos)
-                            .addComponent(rbtT5)
-                            .addComponent(rbtT10)
-                            .addComponent(rbtT20)
-                            .addComponent(rbtTOtro))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
                         .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtSemilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblSemilla))
@@ -331,7 +300,7 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
                 .addGroup(pnlJuCuadradoJavaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGenerarNumeros)
                     .addComponent(btnGraficar))
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlJuCuadradoJava, java.awt.BorderLayout.CENTER);
@@ -398,20 +367,27 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
         }
         
         if (n > 0 && a > 0 && m > 0 && c > 0 && semilla >= 0) {
-            Enumeration<AbstractButton> elements = btgIntervalosT.getElements();
+            //Enumeration<AbstractButton> elements = btgIntervalosT.getElements();
             int intervalos = 20;
-            while (elements.hasMoreElements()) {
-                AbstractButton ab = elements.nextElement();
-                if( ab.isSelected() ){
-                    if(ab.getText().equals("Otro:")){ //DANI LO AGREGO ------------------------
-                        intervalos = Integer.parseInt(txtIntervaloOtro.getText());//DANI LO AGREGO ------------------------
-                        //System.out.println(intervalos); lo hice para debuggear
-                    }else{
-                        intervalos = Integer.parseInt(ab.getText()); //DANI LO AGREGO ------------------------
-                    }
-                    break;
-                }
-            }
+            // VALTER AGREGO -------
+            try{
+                intervalos = Integer.parseInt(txtIntervaloOtro.getText());
+            }  catch(NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+            //VALTER AGREGO-------
+//            while (elements.hasMoreElements()) {
+//                AbstractButton ab = elements.nextElement();
+//                if( ab.isSelected() ){
+//                    if(ab.getText().equals("Otro:")){ //DANI LO AGREGO ------------------------
+//                        intervalos = Integer.parseInt(txtIntervaloOtro.getText());//DANI LO AGREGO ------------------------
+//                        //System.out.println(intervalos); lo hice para debuggear
+//                    }else{
+//                        intervalos = Integer.parseInt(ab.getText()); //DANI LO AGREGO ------------------------
+//                    }
+//                    break;
+//                }
+//            }
             this.listFI = gestor.generarFrecuenciasJiCuadrado(Gestor.GENERADOR_CONGRUENCIAL_MIXTO,
                     n,
                     intervalos,
@@ -498,10 +474,6 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_cbxCAutomaticoActionPerformed
 
-    private void rbtTOtroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtTOtroActionPerformed
-        txtIntervaloOtro.setEnabled(true); //DANI LO AGREGO ------------------------
-    }//GEN-LAST:event_rbtTOtroActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgIntervalosT;
@@ -527,10 +499,6 @@ public class VentanaJiCuadradoCongruencial extends javax.swing.JFrame {
     private javax.swing.JPanel pnlJuCuadradoJava;
     private javax.swing.JRadioButton rbtParametrosAM;
     private javax.swing.JRadioButton rbtParametrosGK;
-    private javax.swing.JRadioButton rbtT10;
-    private javax.swing.JRadioButton rbtT20;
-    private javax.swing.JRadioButton rbtT5;
-    private javax.swing.JRadioButton rbtTOtro;
     private javax.swing.JScrollPane scpTblFrecuencias;
     private javax.swing.JTable tblFrecuencias;
     private javax.swing.JTextField txtA;
